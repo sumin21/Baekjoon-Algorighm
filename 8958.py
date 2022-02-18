@@ -6,6 +6,17 @@ for i in range(n):
     for k in s:
         arr.append(k)
 
-    tmp = False  # before val is O -> True
+    score = 0
+    beforVal = 0
+
     for k in arr:
-        if (tmp and)
+        if (beforVal != 0 and k == 'O'):
+            beforVal += 1
+        elif (k == 'O'):
+            beforVal = 1
+        else:
+            beforVal = 0
+
+        score += beforVal
+
+    print(score)
