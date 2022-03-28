@@ -1,3 +1,4 @@
+# 모든 경우의 수 볼때, 그래프가 클때 (스택)
 def dfs(ob, start):
     for key, value in ob.items():
         value.sort(reverse=True)
@@ -12,6 +13,8 @@ def dfs(ob, start):
             noVisit.extend(ob[node])
 
     return visit
+
+# 최단 경로 검색 시, 그래프가 작을때 (큐)
 
 
 def bfs(ob, start):
